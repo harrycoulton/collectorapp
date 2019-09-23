@@ -1,21 +1,12 @@
 <?php
+include('db.php');
 
-$db = new PDO ('mysql:host=db; dbname=jameswaves', 'root', 'password');
-
-$db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-
-$query = $db-> query('SELECT `name`, `pleasantness`, `genuine`, `wavepivot` FROM `jameswaves`');
-
-$waves = $query->fetchAll();
-
+function printTiles($waves) {
 
 foreach ($waves as $wavearrays){
-        $waveName = $wavearrays['name'];
-        $wavePleasant = $wavearrays['pleasantness'];
-        $waveGenuine = $wavearrays['genuine'];
-        $wavePivot = $wavearrays['wavepivot'];
-        $waveTile = displayWave($waveName, $wavePleasant, $waveGenuine, $wavePivot);
+        $waveTile = displayWave($wavearrays['name'], $wavearrays['pleasantness'], $wavearrays['genuine'], $wavearrays['wavepivot']);
         echo $waveTile;
+}
 }
 
 

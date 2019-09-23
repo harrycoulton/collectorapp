@@ -1,6 +1,7 @@
 <?php
 include('functions.php');
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +9,7 @@ include('functions.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
 <body>
     <h1>
@@ -16,9 +18,9 @@ include('functions.php');
     <h2>
         A MAN OF MANY TALENTS
     </h2>
-<div>
+<div class="wavearea">
 <?php
-
+  printTiles($waves);
 ?>
 </div>
 </body>
