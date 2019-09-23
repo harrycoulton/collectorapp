@@ -9,12 +9,10 @@ $query = $db-> query('SELECT `name`, `pleasantness`, `genuine`, `wave-pivot` FRO
 $waves = $query->fetchAll();
 
 foreach ($waves as $wavesarray) {
-    echo "<ul>";
-    echo $wavesarray['name'] . ":";
-    echo "<li> Pleasantness: " . $wavesarray['pleasantness'] . "</li>";
-    echo "<li> Genuine?: " . $wavesarray['genuine'] . "</li>";
-    echo "<li> Wave pivot: " . $wavesarray['wave-pivot'] . "</li>";
-    echo "</ul>";
+    $wavename = $wavesarray['name'];
+    $wavepleasantness = $wavesarray['pleasantness'];
+    $wavegenuine = $wavesarray['genuine'];
+    $wavepivot = $wavesarray['wave-pivot'];
 };
 
 ?>
