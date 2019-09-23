@@ -1,0 +1,19 @@
+body {
+    position: relative;
+}
+
+.add-wave {
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.wave-area {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.wave-tile {
+    padding: 10px;
+    margin: 25px 25px;
+}
