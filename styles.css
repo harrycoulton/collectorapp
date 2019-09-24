@@ -1,11 +1,19 @@
-body {
+.indexbody {
     position: relative;
+}
+
+.topbar {
+    text-align: center;
+    background-color: black;
 }
 
 .add-wave {
     position: fixed;
     top: 0;
     right: 0;
+    border-radius: 25px;
+    padding: 10px;
+    background: rgba(198, 198, 198, 0.5);
 }
 
 .wave-area {

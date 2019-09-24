@@ -26,7 +26,7 @@ function displayWave($waveName, $wavePleasant, $waveGenuine, $wavePivot, $waveID
         $display .= '<h3 class="nameofwave">' . $waveName . '</h3>';
         $display .= '<img class="wavegif" src="images/wave' . $waveID . '.gif">';
         $display .= '<ul>';
-        $display .= '<li>Pleasantness: ' . $wavePleasant .'</li>';
+        $display .= '<li>Pleasantness: ' . $wavePleasant .'/10</li>';
         $display .= '<li>Genuine: ' . $waveGenuine . '</li>';
         $display .= '<li>Wave-pivot: ' . $wavePivot . '</li>';
         $display .= '</ul>';
