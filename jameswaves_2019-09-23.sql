@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.27)
 # Database: jameswaves
-# Generation Time: 2019-09-23 12:26:23 +0000
+# Generation Time: 2019-09-23 15:44:21 +0000
 # ************************************************************
 
 
@@ -24,13 +24,28 @@
 # ------------------------------------------------------------
 
 CREATE TABLE `jameswaves` (
-  `id` int(11) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `pleasantness` varchar(255) DEFAULT NULL,
-  `genuine` int(11) DEFAULT NULL,
-  `wave-pivot` varchar(255) DEFAULT NULL
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL DEFAULT '',
+  `pleasantness` varchar(255) NOT NULL DEFAULT '',
+  `genuine` tinyint(1) DEFAULT NULL,
+  `wavepivot` varchar(255) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+LOCK TABLES `jameswaves` WRITE;
+/*!40000 ALTER TABLE `jameswaves` DISABLE KEYS */;
+
+INSERT INTO `jameswaves` (`id`, `name`, `pleasantness`, `genuine`, `wavepivot`)
+VALUES
+	(1,'The Queen','7.0',NULL,'wrist'),
+	(2,'The Toddler','8.0',NULL,'wrist'),
+	(3,'The Drowner','3.0',NULL,'shoulder'),
+	(4,'The Patroniser','1.0',NULL,'wrist'),
+	(5,'The Smiler','10.0',NULL,'elbow'),
+	(6,'The Attention Seeker','2.5',NULL,'elbow'),
+	(7,'The Microwave','10',NULL,'finger');
+
+/*!40000 ALTER TABLE `jameswaves` ENABLE KEYS */;
+UNLOCK TABLES;
 
 
 
