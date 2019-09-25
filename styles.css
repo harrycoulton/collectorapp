@@ -1,10 +1,10 @@
 .index-body {
-    background-image: linear-gradient(to bottom, #623317, #58381d, #503c25, #483e2f, #423f39);
+    background-image: linear-gradient(to right top, #556174, #486373, #3d646e, #376566, #39645a, #3e6659, #436958, #486b57, #4b7363, #4e7a6e, #53827a, #588986);
     font-family: 'Lato', sans-serif;
 }
 
 .add-body {
-    background-image: linear-gradient(90deg, #623317, #58381d, #503c25, #483e2f, #423f39);
+    background-image: linear-gradient(90deg, #556174, #486373, #3d646e, #376566, #39645a, #3e6659, #436958, #486b57, #4b7363, #4e7a6e, #53827a, #588986);
     font-family: 'Lato', sans-serif;
     color: white;
     display: flex;
@@ -12,10 +12,14 @@
     align-items: center;
 }
 
+body {
+    background-image: linear-gradient(90deg, #556174, #486373, #3d646e, #376566, #39645a, #3e6659, #436958, #486b57, #4b7363, #4e7a6e, #53827a, #588986);
+}
+
 
 .topbar {
     text-align: center;
-    position: relative;
+    width: 100%;
     color: white;
 }
 
@@ -27,6 +31,8 @@
     padding: 10px;
     background: rgba(198, 198, 198, 0.5);
     width: 60px;
+    text-decoration: none;
+    text-align: center;
 }
 
 .wave-area {
@@ -38,12 +44,13 @@
     padding: 10px;
     margin: 25px 25px;
     width: 30%;
-    background-color: rgba(62, 34, 17, 0.7);
+    background-color: rgba(128, 110, 105, 0.6);
     border-radius: 25px;
     color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 4px inset black;
 }
 
 .userformwrapper {
@@ -60,15 +67,28 @@
     align-items: center;
     justify-content: center;
     line-height: 50px;
-    background-color: rgba(62, 34, 17, 0.7);
+    background-color: rgba(85, 107, 47, 0.3);
     width: 60vw;
     height: 60vh;
     border-radius: 50px;
+    border: 4px inset black;
 }
 
-input[type="submit"] {
-    height: 1000px;
+.successMessage {
+    color: green;
+}
+
+.failureMessage {
     color: red;
-    width: 100px;
-    font-size: 45rem; 
+}
+
+.wavegif {
+    border-radius: 25px;
+}
+
+.nameofwave {
+    font-size: 1.5rem;
+    padding: 10px 0px 20px 0px;
+    margin: 0;
+    text-decoration: underline;
 }
