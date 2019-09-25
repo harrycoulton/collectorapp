@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include('db.php');
 
 /*
@@ -12,8 +12,6 @@ function waveuploader($db, $wavename, $pleasant, $genuine, $wavepivot, $feeling)
     $waveUpload = $db->query('INSERT INTO `jameswaves`(`name`, `pleasantness`, `genuine`, `wavepivot`, `feeling`) VALUES (\'' . $wavename . '\', \'' . $pleasant . '\', \'' . $genuine . '\', \'' . $wavepivot . '\', \'' . $feeling . '\')');
     return $waveUpload;
 };
-
-waveuploader($db, $_POST['waveName'], $_POST['pleasantness'], $_POST['genuine'], $_POST['wavePivot'], $_POST['feeling']);
 
 /*
 The below if statement will upload the file, if it's found to be have
@@ -35,8 +33,11 @@ if (isset($_POST['submit'])) {
         $target_dir = 'images/' . $waveName . '.' . $fileActualExt;
         move_uploaded_file($fileTmpName, $target_dir);
         header("Location: index.php?uploadsuccess");
+        waveuploader($db, $_POST['waveName'], $_POST['pleasantness'], $_POST['genuine'], $_POST['wavePivot'], $_POST['feeling']);
+        $_SESSION['uploadSuccess'] = true;
     } else {
         header("Location: index.php?uploadfailure");
+        $_SESSION['uploadFailure'] = true;
     }
 }
 ?>

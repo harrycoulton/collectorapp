@@ -7,8 +7,6 @@ include('db.php');
  * row in the database.
  */
 
-
-
 function printTiles($waves)
     {
         foreach ($waves as $wave){
