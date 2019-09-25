@@ -22,6 +22,11 @@ include('functions.php');
         echo '<p class="failureMessage">Wave upload failed</p>';
     }
     ?>
+    <form method="post" action="verify.php" class="loginZone">
+        <input type="text" name="username" placeholder="username" required>
+        <input type="password" name="password" placeholder="password" required>
+        <input type="submit" value="LOGIN">
+    </form>
     <h1>
         THE MANY WAVES OF DANGEROUS JAMES
     </h1>
