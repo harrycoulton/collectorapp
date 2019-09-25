@@ -4,7 +4,7 @@ include('functions.php');
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,11 +22,6 @@ include('functions.php');
         echo '<p class="failureMessage">Wave upload failed</p>';
     }
     ?>
-    <form method="post" action="verify.php" class="loginZone">
-        <input type="text" name="username" placeholder="username" required>
-        <input type="password" name="password" placeholder="password" required>
-        <input type="submit" value="LOGIN">
-    </form>
     <h1>
         THE MANY WAVES OF DANGEROUS JAMES
     </h1>

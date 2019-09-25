@@ -1,15 +1,19 @@
 .index-body {
-    background-image: linear-gradient(to bottom, #623317, #58381d, #503c25, #483e2f, #423f39);
+    background-image: linear-gradient(to right top, #556174, #486373, #3d646e, #376566, #39645a, #3e6659, #436958, #486b57, #4b7363, #4e7a6e, #53827a, #588986);
     font-family: 'Lato', sans-serif;
 }
 
 .add-body {
-    background-image: linear-gradient(90deg, #623317, #58381d, #503c25, #483e2f, #423f39);
+    background-image: linear-gradient(90deg, #556174, #486373, #3d646e, #376566, #39645a, #3e6659, #436958, #486b57, #4b7363, #4e7a6e, #53827a, #588986);
     font-family: 'Lato', sans-serif;
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+body {
+    background-image: linear-gradient(90deg, #556174, #486373, #3d646e, #376566, #39645a, #3e6659, #436958, #486b57, #4b7363, #4e7a6e, #53827a, #588986);
 }
 
 
@@ -39,7 +43,7 @@
     padding: 10px;
     margin: 25px 25px;
     width: 30%;
-    background-color: rgba(85, 107, 47, 0.3);
+    background-color: rgba(128, 110, 105, 0.6);
     border-radius: 25px;
     color: white;
     display: flex;
@@ -86,10 +90,4 @@
     padding: 10px 0px 20px 0px;
     margin: 0;
     text-decoration: underline;
-}
-
-.loginZone {
-    position: absolute;
-    top: 10px;
-    right: 20px;
 }
