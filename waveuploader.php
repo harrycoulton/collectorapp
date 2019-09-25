@@ -2,13 +2,27 @@
 
 include('db.php');
 
+/*
+ * The below function is designed to take user input and put it into the database, such that
+ * it can be shown on the index.php page.
+ */
+
+function waveuploader($db, $wavename, $pleasant, $genuine, $wavepivot, $feeling) {
+
+    $waveUpload = $db->query('INSERT INTO `jameswaves`(`name`, `pleasantness`, `genuine`, `wavepivot`, `feeling`) VALUES (\'' . $wavename . '\', \'' . $pleasant . '\', \'' . $genuine . '\', \'' . $wavepivot . '\', \'' . $feeling . '\')');
+    return $waveUpload;
+};
+
+waveuploader($db, $_POST['waveName'], $_POST['pleasantness'], $_POST['genuine'], $_POST['wavePivot'], $_POST['feeling']);
+
+/*
+The below if statement will upload the file, if it's found to be have
+been posted, and if it's in the correct format.
+*/
 
 if (isset($_POST['submit'])) {
-    $file = $_FILES['file'];
     $fileName = $_FILES['file']['name'];
     $fileTmpName = $_FILES['file']['tmp_name'];
-    $fileError = $_FILES['file']['error'];
-    $fileType = $_FILES['file']['type'];
     $waveName = $_POST['waveName'];
 
     $fileExt = explode('.', $fileName);
@@ -25,16 +39,6 @@ if (isset($_POST['submit'])) {
         header("Location: index.php?uploadfailure");
     }
 }
-
-function waveuploader($db, $wavename, $pleasant, $genuine, $wavepivot, $feeling) {
-
-    $waveUpload = $db->query('INSERT INTO `jameswaves`(`name`, `pleasantness`, `genuine`, `wavepivot`, `feeling`) VALUES (\'' . $wavename . '\', \'' . $pleasant . '\', \'' . $genuine . '\', \'' . $wavepivot . '\', \'' . $feeling . '\')');
-    return $waveUpload;
-};
-
-waveuploader($db, $_POST['waveName'], $_POST['pleasantness'], $_POST['genuine'], $_POST['wavePivot'], $_POST['feeling']);
-
 ?>
 
-DELETE FROM `jameswaves` WHERE `name` = $_POST
 
