@@ -7,12 +7,10 @@ include('db.php');
  * row in the database.
  */
 
-
-
 function printTiles($waves)
     {
-        foreach ($waves as $wave){
-            $waveTile = displayWave($wave['name'], $wave['pleasantness'], $wave['genuine'], $wave['wavepivot'], $wave['feeling']);
+        foreach ($waves as $wavearrays){
+            $waveTile = displayWave($wavearrays['name'], $wavearrays['pleasantness'], $wavearrays['genuine'], $wavearrays['wavepivot'], $wavearrays['id']);
             echo $waveTile;
         }
     }
@@ -22,20 +20,17 @@ function printTiles($waves)
  * will put each of those array values into html format to be echoed in the
  * index file.
  */
-function displayWave($waveName, $wavePleasant, $waveGenuine, $wavePivot, $waveFeeling)
+function displayWave($waveName, $wavePleasant, $waveGenuine, $wavePivot, $waveID)
     {
         $display = '<div class="wave-tile">';
         $display .= '<h3 class="nameofwave">' . $waveName . '</h3>';
-        $display .= '<img class="wavegif" src="images/'. $waveName . '.gif">';
+        $display .= '<img class="wavegif" src="images/wave' . $waveID . '.gif">';
         $display .= '<ul>';
         $display .= '<li>Pleasantness: ' . $wavePleasant .'/10</li>';
         $display .= '<li>Genuine: ' . $waveGenuine . '</li>';
         $display .= '<li>Wave-pivot: ' . $wavePivot . '</li>';
-        $display .= '<li>Feeling after seeing: ' . $waveFeeling . '</li>';
         $display .= '</ul>';
         $display .= '</div>';
         return $display;
     }
-
-
 ?>

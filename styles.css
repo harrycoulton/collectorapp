@@ -1,32 +1,19 @@
-.index-body {
-    background-image: linear-gradient(to bottom, #623317, #58381d, #503c25, #483e2f, #423f39);
-    font-family: 'Lato', sans-serif;
+.indexbody {
+    position: relative;
 }
-
-.add-body {
-    background-image: linear-gradient(90deg, #623317, #58381d, #503c25, #483e2f, #423f39);
-    font-family: 'Lato', sans-serif;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 
 .topbar {
     text-align: center;
-    position: relative;
-    color: white;
+    background-color: black;
 }
 
 .add-wave {
     position: fixed;
-    top: 100px;
+    top: 0;
     right: 0;
     border-radius: 25px;
     padding: 10px;
     background: rgba(198, 198, 198, 0.5);
-    width: 60px;
 }
 
 .wave-area {
@@ -37,38 +24,4 @@
 .wave-tile {
     padding: 10px;
     margin: 25px 25px;
-    width: 30%;
-    background-color: rgba(62, 34, 17, 0.7);
-    border-radius: 25px;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.userformwrapper {
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    height: 90vh;
-}
-
-.userform {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    line-height: 50px;
-    background-color: rgba(62, 34, 17, 0.7);
-    width: 60vw;
-    height: 60vh;
-    border-radius: 50px;
-}
-
-input[type="submit"] {
-    height: 1000px;
-    color: red;
-    width: 100px;
-    font-size: 45rem; 
 }
