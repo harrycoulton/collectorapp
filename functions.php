@@ -49,7 +49,7 @@ function displayWave(string $waveName, int $wavePleasant, string $waveGenuine, s
         $display .= '<form method="post" action="deleter.php">';
         $display .= '<input hidden name="id" value="' . $id . '">';
         $display .= '<button type="submit"> DELETE </button>';
-        $display .=  '</form>';
+        $display .= '</form>';
         $display .= '</div>';
         return $display;
     }
