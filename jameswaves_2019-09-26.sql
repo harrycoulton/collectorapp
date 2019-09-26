@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.27)
 # Database: jameswaves
-# Generation Time: 2019-09-23 15:44:21 +0000
+# Generation Time: 2019-09-26 14:49:16 +0000
 # ************************************************************
 
 
@@ -24,25 +24,28 @@
 # ------------------------------------------------------------
 
 CREATE TABLE `jameswaves` (
-  `id` int(11) NOT NULL,
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL DEFAULT '',
-  `pleasantness` varchar(255) NOT NULL DEFAULT '',
-  `genuine` tinyint(1) DEFAULT NULL,
-  `wavepivot` varchar(255) NOT NULL DEFAULT ''
+  `pleasantness` int(2) NOT NULL,
+  `genuine` varchar(3) NOT NULL DEFAULT '',
+  `wavepivot` varchar(255) NOT NULL DEFAULT '',
+  `feeling` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `jameswaves` WRITE;
 /*!40000 ALTER TABLE `jameswaves` DISABLE KEYS */;
 
-INSERT INTO `jameswaves` (`id`, `name`, `pleasantness`, `genuine`, `wavepivot`)
+INSERT INTO `jameswaves` (`id`, `name`, `pleasantness`, `genuine`, `wavepivot`, `feeling`)
 VALUES
-	(1,'The Queen','7.0',NULL,'wrist'),
-	(2,'The Toddler','8.0',NULL,'wrist'),
-	(3,'The Drowner','3.0',NULL,'shoulder'),
-	(4,'The Patroniser','1.0',NULL,'wrist'),
-	(5,'The Smiler','10.0',NULL,'elbow'),
-	(6,'The Attention Seeker','2.5',NULL,'elbow'),
-	(7,'The Microwave','10',NULL,'finger');
+	(1,'The Queen',7,'No','wrist','Motivated'),
+	(2,'The Toddler',3,'Yes','knuckle','Uncomfortable'),
+	(3,'The Drowner',3,'Yes','shoulder','Happiest I\'ve been in a long time'),
+	(4,'The Patroniser',1,'No','wrist','Disturbed'),
+	(5,'The Smiler',10,'Yes','elbow','Horny'),
+	(6,'The Attention Seeker',3,'Yes','elbow','Disturbed & horny'),
+	(7,'The Microwave',10,'Yes','finger','I had to call my mum'),
+	(113,'The Impostor',3,'no','shoulder','upset');
 
 /*!40000 ALTER TABLE `jameswaves` ENABLE KEYS */;
 UNLOCK TABLES;
