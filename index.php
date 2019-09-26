@@ -35,7 +35,6 @@ include('functions.php');
 
 <div class="wave-area">
 <?php
-
   echo printTiles($waves);
   session_destroy();
 ?>
