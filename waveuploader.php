@@ -22,19 +22,20 @@ if (isset($_POST['submit'])) {
     $fileName = $_FILES['file']['name'];
     $fileTmpName = $_FILES['file']['tmp_name'];
     $waveName = $_POST['waveName'];
-
     $fileExt = explode('.', $fileName);
     $fileActualExt = strtolower(end($fileExt));
-
+    $target_dir = 'images/' . $waveName . '.' . $fileActualExt;
     $allowed = array('gif', 'gifv');
 
     if (in_array($fileActualExt, $allowed)) {
         //allowed
-        $target_dir = 'images/' . $waveName . '.' . $fileActualExt;
         move_uploaded_file($fileTmpName, $target_dir);
         waveuploader($db, $_POST['waveName'], $_POST['pleasantness'], $_POST['genuine'], $_POST['wavePivot'], $_POST['feeling']);
         $_SESSION['uploadSuccess'] = true;
         header("Location: index.php?uploadsuccess");
+    } elseif (file_exists($target_dir)) {
+        header("Location: index.php?uploadfailure");
+        $_SESSION['uploadFailure'] = true;
     } else {
         header("Location: index.php?uploadfailure");
         $_SESSION['uploadFailure'] = true;
