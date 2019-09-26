@@ -15,7 +15,7 @@ function printTiles(array $waves): string
     {
         $waveTile = '';
         foreach ($waves as $wave){
-            $waveTile .= displayWave($wave['name'], $wave['pleasantness'], $wave['genuine'], $wave['wavepivot'], $wave['feeling']);
+            $waveTile .= displayWave($wave['name'], $wave['pleasantness'], $wave['genuine'], $wave['wavepivot'], $wave['feeling'], $wave['id']);
         }
         return $waveTile;
     }
@@ -35,7 +35,7 @@ function printTiles(array $waves): string
  * @param $waveFeeling is a string containing the emotions felt after seeing James' wave
  * @return string containing the html text to present each wave
  */
-function displayWave(string $waveName, int $wavePleasant, string $waveGenuine, string $wavePivot, string $waveFeeling): string
+function displayWave(string $waveName, int $wavePleasant, string $waveGenuine, string $wavePivot, string $waveFeeling, int $id): string
     {
         $display = '<div class="wave-tile">';
         $display .= '<h3 class="nameofwave">' . $waveName . '</h3>';
@@ -46,6 +46,10 @@ function displayWave(string $waveName, int $wavePleasant, string $waveGenuine, s
         $display .= '<li>Wave-pivot: ' . $wavePivot . '</li>';
         $display .= '<li>Feeling after seeing: ' . $waveFeeling . '</li>';
         $display .= '</ul>';
+        $display .= '<form method="post" action="deleter.php">';
+        $display .= '<input hidden name="id" value="' . $id . '">';
+        $display .= '<button type="submit"> DELETE </button>';
+        $display .=  '</form>';
         $display .= '</div>';
         return $display;
     }

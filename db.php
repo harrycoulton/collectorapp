@@ -5,11 +5,9 @@
  * of arrays which can be manipulated elsewhere.
  */
 
-
-
 $db = new PDO ('mysql:host=db; dbname=jameswaves', 'root', 'password');
 
-$query = $db-> query('SELECT `name`, `pleasantness`, `genuine`, `wavepivot`, `feeling` FROM `jameswaves`');
+$query = $db-> query('SELECT `id`, `name`, `pleasantness`, `genuine`, `wavepivot`, `feeling` FROM `jameswaves`');
 
 $waves = $query->fetchAll();
 
