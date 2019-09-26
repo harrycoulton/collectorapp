@@ -1,5 +1,5 @@
 <?php
-include('db.php');
+include_once('db.php');
 
 
 /**
@@ -7,7 +7,7 @@ include('db.php');
  * placeholders in the displayWave function to create an item-tile for each
  * row in the database.
  *
- * @param $waves is an array
+ * @param $waves is a multidimensional array which contains each row of the database as an array.
  * @return string containing html text to present each wave
  */
 

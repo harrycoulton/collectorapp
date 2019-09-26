@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('db.php');
+include_once('db.php');
 
 /*
  * The below function is designed to take user input and put it into the database, such that
@@ -9,8 +9,8 @@ include('db.php');
 
 function waveuploader($db, $wavename, $pleasant, $genuine, $wavepivot, $feeling) {
 
-    $waveUpload = $db->query('INSERT INTO `jameswaves`(`name`, `pleasantness`, `genuine`, `wavepivot`, `feeling`) VALUES (\'' . $wavename . '\', \'' . $pleasant . '\', \'' . $genuine . '\', \'' . $wavepivot . '\', \'' . $feeling . '\')');
-    return $waveUpload;
+    $waveUpload = $db->prepare('INSERT INTO `jameswaves`(`name`, `pleasantness`, `genuine`, `wavepivot`, `feeling`) VALUES (\'' . $wavename . '\', \'' . $pleasant . '\', \'' . $genuine . '\', \'' . $wavepivot . '\', \'' . $feeling . '\')');
+    $waveUpload->execute([]);
 };
 
 /*
@@ -32,9 +32,9 @@ if (isset($_POST['submit'])) {
         //allowed
         $target_dir = 'images/' . $waveName . '.' . $fileActualExt;
         move_uploaded_file($fileTmpName, $target_dir);
-        header("Location: index.php?uploadsuccess");
         waveuploader($db, $_POST['waveName'], $_POST['pleasantness'], $_POST['genuine'], $_POST['wavePivot'], $_POST['feeling']);
         $_SESSION['uploadSuccess'] = true;
+        header("Location: index.php?uploadsuccess");
     } else {
         header("Location: index.php?uploadfailure");
         $_SESSION['uploadFailure'] = true;
