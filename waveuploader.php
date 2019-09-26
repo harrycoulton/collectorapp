@@ -37,7 +37,7 @@ if (isset($_POST['submit'])) {
         $_SESSION['uploadSuccess'] = true;
     } else {
         header("Location: index.php?uploadfailure");
-        $_SESSION['uploadFailure']= true;
+        $_SESSION['uploadFailure'] = true;
     }
 }
 ?>
