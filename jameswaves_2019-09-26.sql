@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.27)
 # Database: jameswaves
-# Generation Time: 2019-09-26 13:24:24 +0000
+# Generation Time: 2019-09-26 14:22:43 +0000
 # ************************************************************
 
 
@@ -22,6 +22,16 @@
 
 # Dump of table jameswaves
 # ------------------------------------------------------------
+
+CREATE TABLE `jameswaves` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL DEFAULT '',
+  `pleasantness` int(2) NOT NULL,
+  `genuine` varchar(3) NOT NULL DEFAULT '',
+  `wavepivot` varchar(255) NOT NULL DEFAULT '',
+  `feeling` varchar(255) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 LOCK TABLES `jameswaves` WRITE;
 /*!40000 ALTER TABLE `jameswaves` DISABLE KEYS */;
