@@ -1,5 +1,5 @@
 <?php
-include_once('db.php');
+include('db.php');
 
 
 /**
@@ -38,7 +38,7 @@ function displayWave(string $waveName, int $wavePleasant, string $waveGenuine, s
     {
         $display = '<div class="wave-tile">';
         $display .= '<h3 class="nameofwave">' . $waveName . '</h3>';
-        $display .= '<img class="wavegif" src="images/wave' . $waveID . '.gif">';
+        $display .= '<img class="wavegif" src="images/'. $waveName . '.gif">';
         $display .= '<ul>';
         $display .= '<li>Pleasantness: ' . $wavePleasant .'/10</li>';
         $display .= '<li>Genuine: ' . $waveGenuine . '</li>';

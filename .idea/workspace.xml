@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20c8f063-a76c-4264-ae8a-0e95b33e472f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/add.php" beforeDir="false" afterPath="$PROJECT_DIR$/add.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.php" beforeDir="false" afterPath="$PROJECT_DIR$/db.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/The Attention Seeker.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/wave6.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/The Drowner.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/wave3.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/The Impostor.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/The Jamba Juice.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/The Jamba Juice.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/The Microwave.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/wave7.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/The Patroniser.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/wave4.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/The Queen.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/wave1.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/The Smiler.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/wave5.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/The Toddler.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/wave2.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/waveuploader.php" beforeDir="false" afterPath="$PROJECT_DIR$/waveuploader.php" afterDir="false" />
-    </list>
+    <list default="true" id="20c8f063-a76c-4264-ae8a-0e95b33e472f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

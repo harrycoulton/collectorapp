@@ -12,9 +12,9 @@ include_once('functions.php');
     <title>LET'S GET WAVEY</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-<body class="indexbody">
+<body class="index-body">
 <a class="add-wave" href="add.php">
-    Seen James doing a wave? Add it in here!
+    Add new waves here
 </a>
 <div class="topbar">
     <?php
@@ -35,9 +35,6 @@ include_once('functions.php');
     <h2>
         What's your favourite wavourite?
     </h2>
-    <a class="add-wave" href="add.php">
-        Add new waves here
-    </a>
 </div>
 <div class="wave-area">
 <?php

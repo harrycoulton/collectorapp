@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.27)
 # Database: jameswaves
-# Generation Time: 2019-09-26 14:22:43 +0000
+# Generation Time: 2019-09-26 14:49:16 +0000
 # ************************************************************
 
 
@@ -44,7 +44,8 @@ VALUES
 	(4,'The Patroniser',1,'No','wrist','Disturbed'),
 	(5,'The Smiler',10,'Yes','elbow','Horny'),
 	(6,'The Attention Seeker',3,'Yes','elbow','Disturbed & horny'),
-	(7,'The Microwave',10,'Yes','finger','I had to call my mum');
+	(7,'The Microwave',10,'Yes','finger','I had to call my mum'),
+	(113,'The Impostor',3,'no','shoulder','upset');
 
 /*!40000 ALTER TABLE `jameswaves` ENABLE KEYS */;
 UNLOCK TABLES;
