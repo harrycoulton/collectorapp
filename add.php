@@ -39,7 +39,6 @@ include_once('functions.php');
             </select></div>
         <div>How did you feel after seeing James' wave?
             <select name="feeling">
-                <option value="happiest I've been in a long time">Happiest I've been in a long time</option>
                 <option value="I had to call my mum">I had to call my mum</option>
                 <option value="upset">Upset</option>
                 <option value="disturbed">Disturbed</option>

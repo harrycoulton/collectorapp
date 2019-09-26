@@ -43,6 +43,7 @@ function displayWave(string $waveName, int $wavePleasant, string $waveGenuine, s
         $display .= '<li>Pleasantness: ' . $wavePleasant .'/10</li>';
         $display .= '<li>Genuine: ' . $waveGenuine . '</li>';
         $display .= '<li>Wave-pivot: ' . $wavePivot . '</li>';
+        $display .= '<li>Wave-pivot: ' . $waveFeeling . '</li>';
         $display .= '</ul>';
         $display .= '<form method="post" action="deleter.php">';
         $display .= '<input hidden name="id" value="' . $id . '">';
