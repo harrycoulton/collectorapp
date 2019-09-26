@@ -18,8 +18,10 @@ include_once('functions.php');
     <?php
     if (isset($_SESSION['uploadSuccess'])){
         echo '<p class="successMessage">Wave uploaded successfully</p> ';
+    } elseif (isset($_SESSION['uploadFailureDuplicate'])) {
+        echo '<p class="failureMessage">Wave upload failed: Duplicate wave</p>';
     } elseif (isset($_SESSION['uploadFailure'])) {
-        echo '<p class="failureMessage">Wave upload failed</p>';
+        echo '<p class="failureMessage">Wave upload failed: Not a gif!</p>';
     }
     ?>
     <h1>
@@ -27,6 +29,9 @@ include_once('functions.php');
     </h1>
     <h2>
         A MAN OF MANY TALENTS
+    </h2>
+    <h2>
+        What's your favourite wavourite?
     </h2>
     <a class="add-wave" href="add.php">
         Add new waves here
