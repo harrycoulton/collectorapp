@@ -1,3 +1,4 @@
+
 .index-body {
     background-image: linear-gradient(to right top, #556174, #486373, #3d646e, #376566, #39645a, #3e6659, #436958, #486b57, #4b7363, #4e7a6e, #53827a, #588986);
     font-family: 'Lato', sans-serif;
@@ -26,9 +27,17 @@ body {
     align-items: center;
 }
 
+.indexbody {
+    position: relative;
+}
+
+.topbar {
+    text-align: center;
+}
+
 .add-wave {
     position: fixed;
-    top: 100px;
+    top: 0;
     right: 0;
     border-radius: 25px;
     padding: 10px;
@@ -36,6 +45,7 @@ body {
     width: 60px;
     text-decoration: none;
     text-align: center;
+
 }
 
 .wave-area {

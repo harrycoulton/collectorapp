@@ -11,9 +11,11 @@ include_once('functions.php');
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>LET'S GET WAVEY</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
 </head>
-<body class="index-body">
+<body class="indexbody">
+<a class="add-wave" href="add.php">
+    Seen James doing a wave? Add it in here!
+</a>
 <div class="topbar">
     <?php
     if (isset($_SESSION['uploadSuccess'])){
@@ -37,7 +39,6 @@ include_once('functions.php');
         Add new waves here
     </a>
 </div>
-
 <div class="wave-area">
 <?php
   echo printTiles($waves);

@@ -26,7 +26,6 @@ function printTiles(array $waves): string
  * index file.
  */
 
-
 /**
  * @param $waveName is a string containing the name of the wave
  * @param $wavePleasant is an integer containing the pleasant rating of the wave
@@ -39,12 +38,11 @@ function displayWave(string $waveName, int $wavePleasant, string $waveGenuine, s
     {
         $display = '<div class="wave-tile">';
         $display .= '<h3 class="nameofwave">' . $waveName . '</h3>';
-        $display .= '<img class="wavegif" src="images/'. $waveName . '.gif">';
+        $display .= '<img class="wavegif" src="images/wave' . $waveID . '.gif">';
         $display .= '<ul>';
         $display .= '<li>Pleasantness: ' . $wavePleasant .'/10</li>';
         $display .= '<li>Genuine: ' . $waveGenuine . '</li>';
         $display .= '<li>Wave-pivot: ' . $wavePivot . '</li>';
-        $display .= '<li>Feeling after seeing: ' . $waveFeeling . '</li>';
         $display .= '</ul>';
         $display .= '<form method="post" action="deleter.php">';
         $display .= '<input hidden name="id" value="' . $id . '">';
